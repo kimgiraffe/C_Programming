@@ -10,6 +10,14 @@ void main() {
         }
     }
 
+    /*
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 4; j++){
+            y[i][j] = i + j * 3 + 1;
+        }
+    }
+    */
+
     for(i = 0; i < 3; i++){
         for(j = 0; j < 4; j++){
             printf("%d ", y[i][j]);
