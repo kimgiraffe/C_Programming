@@ -12,9 +12,9 @@ void main() {
         }
     }
     num = 1;
-    for(i = 0; i < 4; i++){     //배열 y에 값 할당
-        for(j = 0; j < 3; j++){
-            y[j][i] = num;
+    for(j = 0; j < 4; j++){     //배열 y에 값 할당
+        for(i = 0; i < 3; i++){
+            y[i][j] = num;
             num++;
         }
     }
