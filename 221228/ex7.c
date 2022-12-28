@@ -33,9 +33,9 @@ void main() {
     }
     printf("\n");
     for(i = 0; i < 3; i++){     //곱행렬 r 계산
-        for(j = 0; j < 3; j++){
-            for(k = 0; k < 4; k++){
-                r[i][k] += x[i][j] * y[j][k];
+        for(j = 0; j < 4; j++){
+            for(k = 0; k < 3; k++){
+                r[i][j] += x[i][k] * y[k][j];
             }
         }
     }
