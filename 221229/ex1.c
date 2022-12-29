@@ -1,20 +1,8 @@
 #include <stdio.h>
-
-int add(int num1, int num2){
-    return num1 + num2;
-}
-
-int sub(int num1, int num2){
-    return num1 - num2;
-}
-
-int mul(int num1, int num2){
-    return num1 * num2;
-}
-
-double div(double num1, double num2){
-    return num1 / num2;
-}
+int add(int num1, int num2);
+int sub(int num1, int num2);
+int mul(int num1, int num2);
+double div(double num1, double num2);
 
 void main() {
     int n1 = 0, n2 = 0;
@@ -26,4 +14,16 @@ void main() {
     printf("Sub : %d\n", sub(n1, n2));
     printf("Mul : %d\n", mul(n1, n2));
     printf("Div : %lf\n", div(n1, n2));
+}
+int add(int num1, int num2){
+    return num1 + num2;
+}
+int sub(int num1, int num2){
+    return num1 - num2;
+}
+int mul(int num1, int num2){
+    return num1 * num2;
+}
+double div(double num1, double num2){
+    return num1 / num2;
 }
