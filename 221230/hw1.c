@@ -1,46 +1,58 @@
 #include <stdio.h>
 
-void mulMatrix(int(*a)[3], int(*b)[4], int(*r)[4], int _i, int _j, int _k);
+void mulMatrix(int(*p)[3], int x, int(*q)[4], int y, int(*r)[4], int z);
 
-void main() {
-    int i, j;
-    int a[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int b[3][4] = {{1, 4, 7, 10}, {2, 5, 8, 11}, {3, 6, 9, 12}};
-    int r[3][4] = {0};
+void main(void) {
+	int z, zz;
+	int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	int b[3][4] = { 1, 4, 7, 10, 2, 5, 8, 11, 3, 6, 9, 12 };
+	int result[3][4] = { 0 };
 
-    for(i = 0; i < 3; i++){
-        for(j = 0; j < 3; j++){
-            printf("%d ", *(*(a+i)+j));
-        }
-        printf("\n");
-    }
-    printf("\n");
+	//배열 a, b 출력
+	for (z = 0; z < 3; z++) {
+		for (zz = 0; zz < 3; zz++) {
+			printf("%d ", a[z][zz]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for (z = 0; z < 3; z++) {
+		for (zz = 0; zz < 4; zz++) {
+			printf("%d ", b[z][zz]);
+		}
+		printf("\n");
+	}
+	printf("\n");
 
-    for(i = 0; i < 3; i++){
-        for(j = 0; j < 4; j++){
-            printf("%d ", *(*(b+i)+j));
-        }
-        printf("\n");
-    }
-    printf("\n");
+	mulMatrix(a, 3, b, 3, result, 3); // 배열 3개 넘기는 부분 
 
-    mulMatrix(a, b, r, sizeof(r)/sizeof(*r), sizeof(*r)/sizeof(int), sizeof(a)/sizeof(*a));
-
-    for(i = 0; i < 3; i++){
-        for(j = 0; j < 4; j++){
-            printf("%d ", *(*(r+i)+j));
-        }
-        printf("\n");
-    }
+	//배열 result 출력
+	for (z = 0; z < 3; z++) {
+		for (zz = 0; zz < 4; zz++) {
+			printf("%d ", result[z][zz]);
+		}
+		printf("\n");
+	}
 }
 
-void mulMatrix(int(*a)[3], int(*b)[4], int(*r)[4], int _i, int _j, int _k){
-    int i, j, k;
-    for(i = 0 ; i < _i; i++){
-        for(j = 0; j < _j; j++){
-            for(k = 0; k < _k; k++){
-                r[i][j] += a[i][k] * b[k][j];
-            }
-        }
-    }
+void mulMatrix(int(*p)[3], int x, int(*q)[4], int y, int(*r)[4], int z) {
+	int i, j, k;
+	int a, b, c;
+
+	//첫번째 반복 횟수 i 구하기, p의 행
+    i = sizeof(*p)/sizeof(int);
+
+	//두번째 반복 횟수 j 구하기, q의 열
+    j = sizeof(q[0])/sizeof(int);
+
+
+	//세번째 반복 횟수 k 구하기
+    k = sizeof(*p)/sizeof(int);
+
+	for (a = 0; a < i; a++) {
+		for (b = 0; b < j; b++) {
+			for (c = 0; c < k; c++)
+				r[a][b] += p[a][c] * q[c][b];
+		}
+	}
 }
