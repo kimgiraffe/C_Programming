@@ -40,14 +40,14 @@ void mulMatrix(int(*p)[3], int x, int(*q)[4], int y, int(*r)[4], int z) {
 	int a, b, c;
 
 	//첫번째 반복 횟수 i 구하기, p의 행
-    i = sizeof(*p)/sizeof(int);
+    i = x * sizeof(*p)/sizeof(p[0]);
 
 	//두번째 반복 횟수 j 구하기, q의 열
     j = sizeof(q[0])/sizeof(int);
 
 
 	//세번째 반복 횟수 k 구하기
-    k = i;
+    k = sizeof(p[0])/sizeof(int);
 
 	for (a = 0; a < i; a++) {
 		for (b = 0; b < j; b++) {
