@@ -24,7 +24,7 @@ void main() {
     }
     printf("\n");
 
-    mulMatrix(a, b, r, sizeof(r)/sizeof(*r), sizeof(*r)/sizeof(int), sizeof(r)/sizeof(*r));
+    mulMatrix(a, b, r, sizeof(r)/sizeof(*r), sizeof(*r)/sizeof(int), sizeof(a)/sizeof(*a));
 
     for(i = 0; i < 3; i++){
         for(j = 0; j < 4; j++){
