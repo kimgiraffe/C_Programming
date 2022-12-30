@@ -47,7 +47,7 @@ void mulMatrix(int(*p)[3], int x, int(*q)[4], int y, int(*r)[4], int z) {
 
 
 	//세번째 반복 횟수 k 구하기
-    k = sizeof(*p)/sizeof(int);
+    k = i;
 
 	for (a = 0; a < i; a++) {
 		for (b = 0; b < j; b++) {
