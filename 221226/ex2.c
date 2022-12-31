@@ -11,8 +11,8 @@ int main() {
     printf("%2d >= %2d is %2d\n", a, b, a >= b);
     printf("%2d == %2d is %2d\n", a, b, a == b);
     printf("%2d != %2d is %2d\n", a, b, a != b);
-    printf("\"aëŠ”5 ì´ê³  bëŠ”3\" is %2d\n", a == 5 && b == 3);
-    printf("\"aëŠ”5 ì´ê³  bëŠ”-3\" is %2d\n", a == 5 && b == -3);
+    printf("\"a´Â5 ÀÌ°í b´Â3\" is %2d\n", a == 5 && b == 3);
+    printf("\"a´Â5 ÀÌ°í b´Â-3\" is %2d\n", a == 5 && b == -3);
 
 
     return 0;
