@@ -3,12 +3,12 @@
 void main() {
     int time[3] = {0, 0, 0};
 
-    printf("ì‹œê°„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("½Ã°£À» ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &time[0]);
-    printf("ë¶„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("ºĞÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &time[1]);
-    printf("ì´ˆë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("ÃÊ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &time[2]);
 
-    printf("%dì‹œê°„ %dë¶„ %dì´ˆëŠ” %dì´ˆ ì…ë‹ˆë‹¤.\n", time[0], time[1], time[2], time[0] * 3600 + time[1] * 60 + time[2]);
+    printf("%d½Ã°£ %dºĞ %dÃÊ´Â %dÃÊ ÀÔ´Ï´Ù.\n", time[0], time[1], time[2], time[0] * 3600 + time[1] * 60 + time[2]);
 }

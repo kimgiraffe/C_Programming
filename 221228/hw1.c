@@ -3,24 +3,24 @@
 void main() {
     int score1[3] = {0};
     int score2[3] = {0};
-    printf("ì² ìˆ˜ì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.\n");
-    printf("êµ­ì–´ : ");
+    printf("Ã¶¼öÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.\n");
+    printf("±¹¾î : ");
     scanf("%d", &score1[0]);
-    printf("ì˜ì–´ : ");
+    printf("¿µ¾î : ");
     scanf("%d", &score1[1]);
-    printf("ìˆ˜í•™ : ");
+    printf("¼öÇĞ : ");
     scanf("%d", &score1[2]);
 
-    printf("ì˜í¬ì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.\n");
-    printf("êµ­ì–´ : ");
+    printf("¿µÈñÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.\n");
+    printf("±¹¾î : ");
     scanf("%d", &score2[0]);
-    printf("ì˜ì–´ : ");
+    printf("¿µ¾î : ");
     scanf("%d", &score2[1]);
-    printf("ìˆ˜í•™ : ");
+    printf("¼öÇĞ : ");
     scanf("%d", &score2[2]);
 
-    printf("ì² ìˆ˜\n");
-    printf("êµ­ì–´ : %dì , ì˜ì–´ : %dì , ìˆ˜í•™ : %dì , í‰ê·  : %dì \n", score1[0], score1[1], score1[2], (score1[0] + score1[1] + score1[2])/3);
-    printf("ì˜í¬\n");
-    printf("êµ­ì–´ : %dì , ì˜ì–´ : %dì , ìˆ˜í•™ : %dì , í‰ê·  : %dì \n", score2[0], score2[1], score2[2], (score2[0] + score2[1] + score2[2])/3);
+    printf("Ã¶¼ö\n");
+    printf("±¹¾î : %dÁ¡, ¿µ¾î : %dÁ¡, ¼öÇĞ : %dÁ¡, Æò±Õ : %dÁ¡\n", score1[0], score1[1], score1[2], (score1[0] + score1[1] + score1[2])/3);
+    printf("¿µÈñ\n");
+    printf("±¹¾î : %dÁ¡, ¿µ¾î : %dÁ¡, ¼öÇĞ : %dÁ¡, Æò±Õ : %dÁ¡\n", score2[0], score2[1], score2[2], (score2[0] + score2[1] + score2[2])/3);
 }
