@@ -1,0 +1,4 @@
+Number of upper case letters : 6
+Number of lower case letters : 29
+Number of arabic characters : 2
+Number of blanks : 9
