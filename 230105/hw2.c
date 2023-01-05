@@ -22,13 +22,9 @@ void main() {
     printf("Result of Subtraction: %.0f + (%.0f)i\n", res.real, res.imag);
     getMultResult(&c1, &c2, &res);
     printf("Result of Multiplication: %.0f + (%.0f)i\n", res.real, res.imag);
-    if(c2.real == 0 && c2.imag == 0) {
-        printf("Result of Division: The real and imaginary part of 2nd complex number must not both be zero for division to be defined!\n");
-    }
-    else{
-        getDivResult(&c1, &c2, &res);
-        printf("Result of Division: %.1f + (%.1f)i\n", res.real, res.imag);
-    }
+    getDivResult(&c1, &c2, &res);
+    printf("Result of Division: %.1f + (%.1f)i\n", res.real, res.imag);
+    
 }
 
 void getComplexNum(Complex *c1, Complex *c2){
