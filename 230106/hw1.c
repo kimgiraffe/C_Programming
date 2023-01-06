@@ -12,30 +12,30 @@ Node* head = NULL;
 
 void create_Node(int id, char* name);
 
-void main() {
+int main() {
+    int id, i;
+    char name[10];
+    Node* prin;
     Node* prev = head;
-    int i;
-    int id;
-    char* name;
-    name = (char*)malloc(sizeof(char) * 10);
 
     for(i = 0; i < 5; i++){
         printf("Input student id : ");
         scanf("%d", &id);
         printf("Input student name : ");
         scanf("%s", name);
+
         create_Node(id, name);
     }
 
-    for(i = 0; i < 5; i++){
-        printf("%d\t%s\n", head->st_id, head->st_name);
-        head = head->link;
+    for(prin = head; prin!= NULL; prin = prin->link){
+        printf("%d\t%s\n", prin->st_id, prin->st_name);
     }
 
-    for(prev; prev!= NULL; prev= prev->link){
+    for(prev; prev!= NULL; prev = prev->link){
         free(prev);
     }
-    free(name);
+
+    return 0;
 }
 
 void create_Node(int id, char* name) {
