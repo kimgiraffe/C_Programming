@@ -16,7 +16,6 @@ int main() {
     int id, i;
     char name[10];
     Node* prin;
-    Node* prev = head;
 
     for(i = 0; i < 5; i++){
         printf("Input student id : ");
@@ -31,8 +30,12 @@ int main() {
         printf("%d\t%s\n", prin->st_id, prin->st_name);
     }
 
-    for(prev; prev!= NULL; prev = prev->link){
-        free(prev);
+    Node* cur = head;
+    Node* tmp = cur;
+    while(cur!=NULL){
+        tmp = tmp->link;
+        free(cur);
+        cur = tmp;
     }
 
     return 0;
