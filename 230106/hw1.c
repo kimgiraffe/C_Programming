@@ -26,8 +26,10 @@ int main() {
         create_Node(id, name);
     }
 
-    for(prin = head; prin!= NULL; prin = prin->link){
+    prin = head;
+    while(prin!= NULL) {
         printf("%d\t%s\n", prin->st_id, prin->st_name);
+        prin = prin->link;
     }
 
     Node* cur = head;
