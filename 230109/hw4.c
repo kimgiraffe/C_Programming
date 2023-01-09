@@ -38,7 +38,7 @@ void print_arr(int* arr, int size){
     int i, j;
     for(i = 0; i < size / 10; i++){
         for(j = 0; j < 10; j++){
-            printf("%5d ", arr[i % 3 * 10 + j]);
+            printf("%5d ", arr[i * 10 + j]);
         }
         printf("\n");
     }
