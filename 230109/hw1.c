@@ -12,8 +12,6 @@ int array[SIZE] = {
     87, 69, 85, 74, 15, 39, 48, 57, 53, 55
     };
 
-int min;
-
 void main()
 {
     printf("> input array:\n"); 
@@ -29,24 +27,20 @@ void sort_arr(int* arr, int size){
     int i;
     for(i = 0; i < size - 1; i++){
         select(arr, i, size - 1);
-        swap_arr_elmt(arr, i, min);
     }
 }
 
 void select(int* arr, int start, int end){
-    int idx;
-    min = start;
-    for(idx = start + 1; idx <= end; idx++){
-        if(arr[min] > arr[idx]) min = idx;
+    int i;
+    for(i = start + 1; i <= end; i++){
+        if(arr[start] > arr[i]) swap_arr_elmt(arr, start, i);
     }
 }
 
 void swap_arr_elmt(int* arr, int i, int j){
-    if(arr[i] > arr[j]){
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-    }
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
 }
 
 void print_arr(int* arr, int size){
